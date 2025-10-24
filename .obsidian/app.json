@@ -1,0 +1,14 @@
+{
+  "alwaysUpdateLinks": true,
+  "showFrontmatter": true,
+  "showLineNumber": true,
+  "readableLineLength": false,
+  "strictLineBreaks": false,
+  "livePreview": true,
+  "defaultViewMode": "source",
+  "attachmentFolderPath": "/",
+  "newLinkFormat": "relative",
+  "useMarkdownLinks": false,
+  "showIndentGuide": true,
+  "showInlineTitle": true
+}
