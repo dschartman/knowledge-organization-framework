@@ -1,16 +1,22 @@
 {
-  "name": "Regenerative Writing Framework Marketplace",
-  "owner": "Don",
+  "name": "knowledge-organization-framework-marketplace",
+  "owner": {
+    "name": "Don Schartman",
+    "email": "don@example.com"
+  },
   "plugins": [
     {
-      "name": "regenerative-writing-framework",
+      "name": "knowledge-organization-framework",
       "description": "A self-hosting knowledge organization framework that separates facts (substrate), meaning (essence), and communication (expression). Uses itself to develop itself.",
       "version": "1.0.0",
-      "author": "Don",
+      "author": {
+        "name": "Don Schartman",
+        "email": "don@example.com"
+      },
       "license": "MIT",
       "source": {
-        "source": "url",
-        "url": "https://github.com/dschartman/regenerative-writing-framework.git"
+        "type": "url",
+        "url": "https://github.com/dschartman/knowledge-organization-framework.git"
       }
     }
   ]
