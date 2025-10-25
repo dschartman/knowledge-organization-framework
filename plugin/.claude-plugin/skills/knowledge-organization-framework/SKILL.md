@@ -1,344 +1,278 @@
 ---
 name: knowledge-organization-framework
-description: A self-hosting knowledge organization framework that separates facts (substrate), meaning (essence), and communication (expression). Helps apply the framework to organize knowledge systematically across different use cases.
+description: Organize complex knowledge into substrate (facts), essence (meaning), and expression (documents) to create well-structured, verifiable documentation. Use when you need to transform scattered information into coherent, audience-specific outputs.
 ---
 
 # Knowledge Organization Framework Skill
 
-## What This Skill Does
+## What This Does
 
-This skill helps you apply a knowledge organization framework to systematically structure knowledge with clear separation of concerns. It's designed to help you and other LLMs:
+This skill helps you apply a three-layer framework to organize knowledge systematically. You decompose information into:
 
-- Understand the **three-layer architecture** (substrate, essence, expression) and why separation matters
-- Apply the framework to different use cases (writing, decision-making, research synthesis, personal knowledge management)
-- Navigate the boundary contracts that keep layers clean and traceable
-- Think through how to organize knowledge *before* producing expressions
-- Generate better documents, decisions, and artifacts from well-organized knowledge
+- **Substrate:** Verifiable facts and observations
+- **Essence:** Interpreted meaning and relationships between concepts
+- **Expression:** Coherent documents, decisions, or communications
 
-**Key insight:** Good knowledge organization creates value independent of any specific output artifact. It enables better writing, better decisions, and better thinking.
+The result: better-structured outputs that are verifiable, traceable to facts, and adaptable to different audiences.
+
+## When to Use This Skill
+
+Use this skill when you need to:
+
+- **Organize complex information** before creating a document, decision, or communication
+- **Understand information quality** by separating facts from interpretation and bias
+- **Generate multiple outputs** from the same knowledge base (e.g., different resumes from one career history)
+- **Improve clarity** by making the connection between facts, meaning, and communication explicit
+- **Build verifiable claims** where others can check your work against source material
+
+**Example scenarios:**
+- Breaking down a news article to see what's factual vs. opinion-driven
+- Organizing research into structured knowledge that supports multiple papers
+- Creating a decision with verifiable reasoning from evidence
+- Building documentation from scattered notes and sources
 
 ---
 
-## The Three-Layer Architecture
+## The Three Layers
 
-### Substrate Layer: Observable Facts
-**Purpose:** Immutable inventory of verified observations and evidence
+### Substrate: Verifiable Facts
 
-**What lives here:**
-- Factual observations with provenance (where they come from)
-- Data points, experiences, research findings
-- Concrete examples and evidence
-- Metrics, dates, outcomes
-- Direct quotes or records
+**What it contains:**
+- Observable facts with their context and source
+- Data, metrics, specific events, direct quotes
+- Experiences and outcomes that can be verified
+- Both knowledge (things that change) and wisdom (principles that don't)
 
-**Characteristics:**
-- Append-only (corrections add new entries rather than mutate old ones)
-- No interpretation or judgment
-- Traceable sources
-- Examples: career accomplishments, project outcomes, research data, meeting notes, customer feedback
+**Key principle:** Substrate stays factual. No interpretation, judgment, or unsupported claims.
 
-**Why it matters:**
-- Prevents the "telephone game" where facts drift over time through repeated retelling
-- Creates a single source of truth for what we actually know
-- Enables traceability: "Where did this claim come from?"
+**Examples:**
+- "Customer feedback: 5 of 8 interviewees mentioned difficulty with onboarding"
+- "Average task completion time: 23 minutes (measured Oct 2025)"
+- "The system processed 1 billion events daily"
 
-### Essence Layer: Meaning and Relationships
-**Purpose:** Abstract, auditable model of significance derived from substrate
+**What's NOT substrate:**
+- "Onboarding is too hard" (interpretation)
+- "Customers hate the setup process" (judgment)
+- "We should fix onboarding" (decision/opinion)
 
-**What lives here:**
+### Essence: Meaning and Relationships
+
+**What it contains:**
 - Claims and principles that interpret substrate facts
-- Relationships between concepts and their dependencies
-- Priorities and what matters
-- Ordering dependencies (concept A before concept B)
-- Terminology and definitions
-- Cause-and-effect reasoning
+- Relationships between concepts and their ordering
+- What matters and why
+- How things depend on each other
 
-**Characteristics:**
-- Traceable to substrate (every claim cites supporting facts)
-- Abstract and generalizable (not tied to specific contexts)
-- Can evolve as understanding deepens
-- Captures relationships and concept ordering as much as individual concepts
+**Key principle:** Essence must be grounded in substrate, but can interpret and combine facts.
 
-**Why it matters:**
-- Meaning emerges from relationships, not isolated facts
-- Proper ordering enables teaching and understanding (you can't learn B before A if B depends on A)
-- Traceability prevents unsupported assertions and keeps meaning grounded in reality
-- You can reason about multiple expressions from the same essence
+**Examples:**
+- Substrate: "5 of 8 customers reported difficulty; competitor average is 5 minutes, ours is 23"
+- Essence: "Onboarding time is a primary adoption barrier. The gap suggests structural issues, not minor friction."
 
-### Expression Layer: Communication and Application
-**Purpose:** Context-specific instantiation of essence for audiences and purposes
+**What's different from substrate:**
+- Essence adds meaning ("this gap signals a problem")
+- Essence connects facts ("these data points together suggest...")
+- Essence evolves as understanding deepens (substrate remains stable)
 
-**What lives here:**
-- Documents, articles, blog posts
-- Decisions and decision rationales
-- Actions and implementations
-- Presentations and communications
-- Anything that puts knowledge to work for a specific purpose
+### Expression: Communication
 
-**Characteristics:**
-- Audience-specific (tailored for who will use it)
-- Purpose-driven (optimized for a specific goal)
-- Can be regenerated if essence changes
-- Derived entirely from essence (not invented from scratch)
+**What it contains:**
+- Documents, articles, decisions
+- Strategies, action plans, communications
+- Anything that puts knowledge to work for a specific purpose and audience
 
-**Why it matters:**
-- Same knowledge can produce multiple expressions for different contexts
-- Separates "what to say" (essence) from "how to say it" (expression)
-- Enables systematic regeneration: if essence improves, expressions can be refreshed
-- Failures in expression generate meta-feedback for essence review
+**Key principle:** Expression renders essence for an audience without modifying the essence itself.
+
+**Examples:**
+- A decision document recommending onboarding redesign
+- A bug report highlighting specific friction points
+- A product roadmap prioritizing user experience
+
+**What matters:**
+- Different expressions can come from the same essence (tailored for different audiences)
+- If expression reveals essence problems, essence gets updated and expression regenerates
+- Expression is audience-specific; substance comes from essence
 
 ---
 
-## The Two Boundary Contracts
+## How the Layers Connect
 
-### Contract 1: Substrate → Essence
-**Type:** Interpretive but Verifiable
+### Substrate → Essence: Interpretation with Verification
 
-**The rule:** Every essence claim must cite supporting substrate facts.
+**The rule:** Every essence claim must be verifiable against substrate. You interpret and combine facts, but don't invent claims.
 
-**What this allows:**
-- ✅ Interpretation of facts (drawing meaning from data)
-- ✅ Combining multiple facts into larger claims
-- ✅ Identifying patterns and relationships
+**What this means:**
+- You can draw conclusions from data
+- You can identify patterns across multiple facts
+- You cannot make claims about facts you haven't included in substrate
 
-**What this prevents:**
-- ❌ Invention (claims with no factual support)
-- ❌ Telephone games (facts drifting away from sources)
-- ❌ Unsupported assertions
+**If you get stuck:**
+- Making a claim with no substrate support? Either add the substrate or remove the claim.
+- Uncertain what substrate supports a claim? Rewrite the claim to be clearer about what it requires.
 
-**How it works:**
-- Essence explicitly references substrate IDs (e.g., "[[S-0001 Framework Purpose]]")
-- If you find yourself making a claim without substrate support, add substrate first, then create the essence claim with citations
-- If substrate is missing, either add it or remove the unsupported claim
+### Essence → Expression: Rendering Without Modification
 
-### Contract 2: Essence → Expression
-**Type:** Representational
+**The rule:** Expression represents essence accurately for its audience. It doesn't change what essence says, only how it's presented.
 
-**The rule:** Expression renders essence; it does not modify essence.
+**What this means:**
+- You can adjust tone, emphasis, and level of detail for your audience
+- You can select which parts of essence matter for this expression
+- You cannot add new claims or change the meaning
 
-**What this allows:**
-- ✅ Stylistic variation (different tones for different audiences)
-- ✅ Selecting relevant subsets of essence
-- ✅ Audience-appropriate framing
-
-**What this prevents:**
-- ❌ Direct modification of essence from expression
-- ❌ Reactive patching that accumulates drift
-- ❌ Unclear boundaries between "what to say" and "how to say it"
-
-**How it works:**
-- Expression failures generate *meta-feedback* for later review
-- Meta-feedback accumulates until periodic essence review
-- If essence needs updating based on expression feedback, you update essence and regenerate the expression
-- This prevents the accumulation of patches and keeps expression clean and regenerable
+**If expression fails:**
+- Expression doesn't solve the problem? Don't patch the expression. Review and update essence, then regenerate.
+- Expression feels wrong? The issue is usually in essence clarity, not expression wording.
 
 ---
 
 ## How to Apply This Framework
 
-### Step 1: Capture Substrate (The Facts)
-Start with what you actually know—don't worry about organizing it perfectly yet.
+### Step 1: Capture Substrate
 
-**Do this when:**
-- Reviewing existing documents or conversations
-- Working through a decision
-- Researching a topic
-- Gathering requirements or feedback
+Start with what you actually know. Don't aim for perfect organization—capture the raw material first.
 
-**Create substrate entries by:**
-- Recording observable facts, outcomes, or data points
-- Including the source or context (provenance)
-- Being specific: "5 customers requested feature X" not "people want feature X"
-- Adding one entry per distinct fact or observation
+**Do this by:**
+- Recording facts, observations, data, and sources
+- Being specific: "5 customers" not "many customers"
+- Noting context: Where does this fact come from? What are its limits?
+- Including one distinct fact per entry
+
+**Example structure:**
+```
+Fact: 5 of 8 customers mentioned difficulty with setup process
+Context: Customer interviews, Oct 2025
+Source: Interview notes from product team
+```
+
+### Step 2: Extract Essence
+
+Once you have substrate, identify what it means.
+
+**Do this by:**
+- Looking for patterns across facts
+- Stating claims that emerge from the facts
+- Noting what substrate supports each claim
+- Identifying how concepts relate and depend on each other
 
 **Example:**
 ```
-id: S-0042
-date: 2025-10-25
-author: @your-name
-provenance: "Customer interviews, Oct 2025"
-tags: [feedback, feature-request]
-
-## Observations
-- 5 out of 8 interviewed customers mentioned difficulty with onboarding
-- Average time to first successful login: 23 minutes (compared to 5 minutes for competitor)
-- 3 customers mentioned unclear terminology in the setup wizard
+Claim: Onboarding speed is a primary adoption barrier
+Supported by: Substrate facts about customer feedback + competitor comparison
+Relates to: User retention (faster onboarding → better retention)
+Depends on: Understanding that 23-minute baseline is the problem before proposing solutions
 ```
 
-### Step 2: Extract Essence (The Meaning)
-Once you have substrate, look for patterns, relationships, and meaning.
+### Step 3: Generate Expression
 
-**Do this when:**
-- You have enough substrate to see patterns
-- You're preparing to make a decision
-- You want to understand what knowledge actually enables
-- You're about to create an expression
+With substrate and essence organized, create the specific output you need.
 
-**Create essence entries by:**
-- Identifying claims or principles that emerge from the facts
-- Explicitly citing the substrate that supports each claim
-- Capturing relationships and dependencies between concepts
-- Explaining *why* something matters or how concepts relate
+**Ask yourself:**
+- Who is the audience for this expression?
+- What is the purpose? (decision, communication, documentation, action)
+- Which parts of essence matter for this audience?
+- What level of detail is appropriate?
 
-**Example (building on the substrate above):**
-```
-id: E-0042
-type: essence
-name: Onboarding Complexity Affects User Adoption
-
-## Claim: Onboarding difficulty is the primary adoption barrier
-
-The data shows onboarding time and clarity issues directly correlate with initial adoption success.
-
-**Supports:** [[S-0042 (the substrate entry above)]]
-
-**Reasoning:** The 23-minute onboarding time vs 5-minute competitor baseline suggests structural issues. Multiple mentions of terminology confusion point to a specific addressable problem.
-
-## Related Concept Dependencies
-- Understanding why users struggle (terminology clarity) must come before redesigning the setup flow
-- Competitive context (5-minute baseline) provides urgency and success criteria
-```
-
-### Step 3: Generate Expression (The Output)
-With organized substrate and essence, create the specific artifact you need.
-
-**Expressions might be:**
-- A onboarding redesign document
-- A decision to prioritize the onboarding project
-- A support guide explaining the setup process
-- A product roadmap emphasizing onboarding improvements
-- An email to stakeholders explaining the problem
-
-**How to approach it:**
-- Ask: "What essence do I need to render for this audience and purpose?"
-- Draw on substrate for concrete examples and numbers
-- Use essence relationships to structure your thinking
-- Generate the expression knowing you can regenerate it if essence changes
+**Then create:**
+- The document, decision, communication, or other artifact
+- Knowing you can regenerate it if essence changes
+- Verifiable back to the substrate and essence that support it
 
 ---
 
-## Different Use Cases (Theory, Not Prescription)
+## Key Principles
 
-### 1. Systematic Writing
-**Goal:** Write well-informed documents that improve over time
+### Every Word Matters
 
-**How it works:**
-- Substrate: notes, research, sources, examples
-- Essence: argument structure, key claims, narrative flow
-- Expression: the actual document (blog post, article, paper)
+In organizing knowledge, each term builds on previous ones. Precision in language makes the framework work.
 
-**Value:** As you learn more, add substrate. Update essence. Regenerate documents that are now better informed.
+- **Substrate** vs **essence** is a real distinction that affects clarity
+- **Verifiable** means "can be checked against facts" (not just "traceable back")
+- **Observation** (fact-based) vs **opinion** (interpretation) must be clear
+- Consistent terminology throughout prevents confusion
 
-### 2. Decision-Making
-**Goal:** Make decisions that are well-reasoned and traceable
+### Expressions are the Primary Interface
 
-**How it works:**
-- Substrate: data, stakeholder input, constraints, outcomes from similar past decisions
-- Essence: principles for this decision, trade-offs, dependencies, success criteria
-- Expression: the actual decision, decision rationale, implementation plan
+Everything communicates through expressions: conversations, documents, feedback.
 
-**Value:** Decisions are traceable to evidence. Future you (or your team) understands *why* this choice was made.
+- The framework does not avoid expressions; it decomposes them
+- Starting with an expression (a document, news article, meeting notes) is normal
+- The value is: understanding what's fact vs. interpretation, then improving the expression
+- This works backwards (expression → understanding) as much as forwards
 
-### 3. Research and Synthesis
-**Goal:** Deeply understand a topic and communicate that understanding
+### Decomposition is Powerful but Unnatural
 
-**How it works:**
-- Substrate: papers, experiments, observations, findings from literature
-- Essence: what the research means, how findings relate, gaps in understanding
-- Expression: synthesis document, literature review, research roadmap
+Breaking down expressions into layers is artificial—but it enables systematic improvement.
 
-**Value:** You don't just collect papers—you understand relationships between them and can identify what's missing.
+- You normally consume information as whole units
+- Separating facts, meaning, and communication takes effort
+- The payoff: you can verify claims, see bias, and regenerate better expressions
 
-### 4. Personal Knowledge Management
-**Goal:** Organize what you know so you can think more clearly and act more effectively
+### Context Determines Everything
 
-**How it works:**
-- Substrate: books you've read, conversations you've had, things you've learned
-- Essence: principles and relationships that emerge from your learning
-- Expression: principles you live by, decisions you make, guidance you give others
+How strictly you apply boundaries depends on what you're building.
 
-**Value:** Your knowledge compounds. Relationships between concepts become visible. You can apply knowledge consistently.
-
----
-
-## Core Principles to Guide Application
-
-### 1. Expression-Driven Development
-**The rule:** The value of creating an expression should drive what you do.
-
-**Key question:** "Does this expression get the job done?"
-
-**Decision tree:**
-- Expression gets the job done → Finish and ship it (even if substrate/essence aren't perfect)
-- Expression doesn't feel right or doesn't solve the problem → Go back and revise essence/substrate
-
-**Avoid:** Letting perfect substrate or essence block useful, working expression.
-
-### 2. Keep It Simple
-**The rule:** Don't over-engineer the structure.
-
-**Focus on:**
-- What actually helps you organize and apply knowledge
-- Discovering what works through use
-- Core concepts and relationships, not perfect taxonomy
-
-**Avoid:**
-- Rigid naming schemes
-- Overly prescriptive structure
-- Treating this framework as a research tool rather than a working system
-
-### 3. Relationships Matter More Than Labels
-**The rule:** How ideas connect to each other matters more than the IDs or names you use.
-
-**This means:**
-- The specific ID format (S-0001 vs S-UUID vs timestamps) doesn't matter
-- The relationships captured (supports, depends on, contradicts) are what create value
-- You can restructure without losing the framework
-
-### 4. Context Determines Everything
-**The rule:** Answers to "how should I handle X?" depend on what expression you're creating.
-
-**Questions to ask:**
-- What am I building this for?
-- Who will use this?
-- What problem am I solving?
-
-**Example:** Contradictory substrate facts might be *the point* (political analysis) or noise (building a spec). Context determines which.
+- Scientific paper: substrate/essence distinction matters enormously
+- Creative writing: boundaries can be looser
+- News analysis: decomposing to find bias is the whole point
+- Personal knowledge: what matters is that it works for you
 
 ---
 
 ## Common Questions
 
-### Q: Should everything go into substrate first?
-**A:** No. Start wherever makes sense for your use case. Personal knowledge management might start with essence (principles you live by). A decision might start with substrate (the facts you're deciding about). Let expression need drive the process.
+**Q: Can I start with essence or expression instead of substrate?**
 
-### Q: What if I don't have perfect substrate?
-**A:** That's fine. Create the essence claim and note what substrate would strengthen it. Come back later to fill gaps. The framework is for organizing what you know, not forcing premature perfection.
+A: Yes. Start wherever the work begins. Analyzing a biased news article? Start with the expression and decompose. Building a decision? The substrate (data) might be your starting point. Let the work guide the flow.
 
-### Q: Can I have expressions that I'm not currently using?
-**A:** Yes. You might generate a document and keep it as a potential expression without publishing it. It's value captured for later use.
+**Q: What if I don't have complete substrate?**
 
-### Q: What if essence and substrate contradict each other?
-**A:** Preserve both. Contradictions often signal missing information, multiple valid perspectives, or context-dependency. Your essence can acknowledge the contradiction or resolve it based on what matters for your expression.
+A: That's fine. Make essence claims noting what substrate would strengthen them. Add the missing substrate later. The framework organizes what you know, not a substitute for research.
 
-### Q: How do I know if my layers are working?
-**A:** Ask:
-- Can I trace essence claims back to substrate? (Contract 1)
-- Can I generate different expressions from the same essence? (Contract 2)
-- Does organizing knowledge this way actually improve my output?
-- Am I spending time maintaining the structure or using it?
+**Q: Is substrate always facts? Can it include stories or experiences?**
 
-### Q: Can this framework work with large scale (thousands of entries)?
-**A:** The framework itself can. Your implementation might change (database vs files, custom tools vs Obsidian, etc.). The core principle (three layers, clear boundaries, graph structure) remains.
+A: Yes to both. Substrate includes observable facts—and personal experiences are observable (to you). "I learned X from this experience" is verifiable substrate. "This experience means Y about humanity" is essence.
+
+**Q: How do I know if something is observation or opinion?**
+
+A: Ask: Can someone independently verify this? If yes, it's potentially substrate. If it requires interpretation or judgment, it's essence. Gray areas are okay—the distinction matters for clarity, not perfection.
+
+**Q: What if essence and substrate disagree?**
+
+A: Keep both. Contradictions often mean: missing information, multiple valid interpretations, or context-dependency. Your essence can acknowledge the contradiction or explain which interpretation matters for your expression.
+
+**Q: Can this work at scale? (hundreds of entries, teams, databases)**
+
+A: The framework itself is scale-agnostic. Implementation might change (database instead of files, custom tools instead of markdown) but core principles remain. Start simple; adapt as you grow.
 
 ---
 
 ## Getting Started
 
-1. **Pick a small, real problem:** something you need to communicate, decide, or understand
-2. **Capture substrate:** write down what you actually know about it (facts, data, evidence)
-3. **Extract essence:** identify the key claims and relationships that emerge
-4. **Generate an expression:** create the document, decision, or artifact you need
-5. **Evaluate:** did this work? Did organizing knowledge this way improve the output?
+1. **Pick a real problem:** something you need to understand, communicate, or decide
+2. **Gather what you know:** capture facts, sources, context (substrate)
+3. **Find the meaning:** what do these facts tell you? (essence)
+4. **Create the output:** document, decision, or communication (expression)
+5. **Verify and iterate:** Does it work? What would improve it?
 
-That's it. The framework is discovered through use, not prescribed in advance.
+The framework is learned through use. Start small, see what works, adapt to your context.
+
+---
+
+## When This Framework Shines
+
+- **News/information analysis:** See what's fact vs. opinion vs. bias
+- **Decision-making:** Decisions grounded in evidence with clear reasoning
+- **Research synthesis:** Understand relationships between sources, not just collect them
+- **Documentation:** Docs that improve over time as understanding grows
+- **Teaching:** Making what you know explicit and verifiable
+- **Complex domains:** Politics, health, science—where bias and interpretation matter
+
+---
+
+## What This Framework Is Not
+
+- Not a guarantee of truth (substrate can contain errors or limited perspectives)
+- Not a rigid structure you must follow perfectly (adapt to your context)
+- Not a way to avoid interpretation (essence layer is interpretation)
+- Not a substitute for domain expertise (framework helps organize expertise, not replace it)
+- Not a mechanism for erasing disagreement (contradictions can coexist in substrate/essence)
