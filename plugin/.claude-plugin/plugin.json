@@ -1,0 +1,10 @@
+{
+  "name": "regenerative-writing-framework",
+  "version": "1.0.0",
+  "description": "A self-hosting knowledge organization framework that separates facts (substrate), meaning (essence), and communication (expression)",
+  "author": "Don",
+  "license": "MIT",
+  "commands": "./commands",
+  "agents": "./agents",
+  "skills": "./skills"
+}

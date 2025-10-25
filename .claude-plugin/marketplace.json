@@ -1,0 +1,17 @@
+{
+  "name": "Regenerative Writing Framework Marketplace",
+  "owner": "Don",
+  "plugins": [
+    {
+      "name": "regenerative-writing-framework",
+      "description": "A self-hosting knowledge organization framework that separates facts (substrate), meaning (essence), and communication (expression). Uses itself to develop itself.",
+      "version": "1.0.0",
+      "author": "Don",
+      "license": "MIT",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/[your-username]/regenerative-writing-framework.git"
+      }
+    }
+  ]
+}
