@@ -2,7 +2,7 @@
   "name": "knowledge-organization-framework-marketplace",
   "owner": {
     "name": "Don Schartman",
-    "email": "don@example.com"
+    "email": "schartmand@gmail.com"
   },
   "plugins": [
     {
@@ -11,7 +11,7 @@
       "version": "1.0.0",
       "author": {
         "name": "Don Schartman",
-        "email": "don@example.com"
+        "email": "schartmand@gmail.com"
       },
       "license": "MIT",
       "source": "./plugin"

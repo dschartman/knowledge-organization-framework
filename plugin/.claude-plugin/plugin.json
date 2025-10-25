@@ -2,9 +2,10 @@
   "name": "knowledge-organization-framework",
   "version": "1.0.0",
   "description": "A self-hosting knowledge organization framework that separates facts (substrate), meaning (essence), and communication (expression)",
-  "author": "Don",
+  "author": {
+    "name": "Don Schartman",
+    "email": "schartmand@gmail.com"
+  },
   "license": "MIT",
-  "commands": "./commands",
-  "agents": "./agents",
   "skills": "./skills"
 }
