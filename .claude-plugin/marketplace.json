@@ -14,7 +14,7 @@
         "email": "don@example.com"
       },
       "license": "MIT",
-      "source": "https://github.com/dschartman/knowledge-organization-framework.git"
+      "source": "./plugin"
     }
   ]
 }
